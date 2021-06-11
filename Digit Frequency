@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    char str[10000];
+    int num[10];
+    scanf("%s",str);
+        for(int i=0;i<10;i++)
+        {
+            num[i]=0;
+        }
+    
+    for(int i=0;i<10000;i++)
+    {
+        if(str[i]=='\0')
+            break;
+            
+        int ch=str[i];
+        if(ch>47&&ch<58)
+        {
+             int b;
+        
+        b=ch-48;
+        
+        num[b]++;
+            
+        }
+       
+        
+    }
+    for(int i=0;i<10;i++)
+        {
+            printf("%d ",num[i]);
+        }  
+    return 0;
+}
